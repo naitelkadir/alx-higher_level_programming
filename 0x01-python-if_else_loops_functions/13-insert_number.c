@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -26,11 +24,11 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = new_node;
 		return (new_node);
 	}
-	while(tmp && tmp->next && tmp->n < number)
+	while(tmp && tmp->next && tmp->next->n < number)
 	{
-		tmp->next = tmp;
+		tmp = tmp->next;
 	}
-	new_node = tmp->next;
+	new_node->next = tmp->next;
 	tmp->next = new_node;
 	return (new_node);
 }
