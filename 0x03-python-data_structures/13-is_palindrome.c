@@ -1,7 +1,28 @@
-#include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "lists.h"
+/**
+ * reverse_list - ...
+ * @head: ...
+ * Return: ...
+ */
+void reverse_list(listint_t **head)
+{
+	listint_t *prev = NULL;
+	listint_t *current = *head;
+	listint_t *next = NULL;
+	
+	while (current)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	*head = prev;
+}
+
 /**
  * is_palindrome - ...
  * @head: ...
@@ -9,38 +30,43 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp = *head;
-	listint_t *front, *rear;
-        int i = 0, j, c = 0;
-        
+	listint_t *slow = *head, *fast = *head, *tmp = *head, *node = NULL;
+	
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return (1);
 	}
-	while (tmp != NULL)
+	while (1)
 	{
-		tmp = tmp->next;
-		c++;
+		fast = fast->next->next;
+		if (!fast)
+		{
+			node = slow->next;
+			break;
+		}
+		if (!fast-<next)
+		{
+			node = slow->next->next;
+			break;
+		}
+		slow = slow->next;
 	}
-	while (i != c / 2)
+	reverse_list(&node);
+	while (node && tmp)
 	{
-		front = rear = *head;
-		for (j = 0; j < i; j++)
+		if (tmp->n == node->n)
 		{
-			front = front->next;
-		}
-		for (j = 0; j < c - (i + 1); j++)
-		{
-			rear = rear->next;
-		}
-		if (front->n != rear->n)
-		{
-			return (0);
+			node = node->next;
+			tmp = tmp->next;
 		}
 		else
 		{
-			i++;
+			return (0);
 		}
 	}
-	return (1);
+	if (!node)
+	{
+		return (1);
+	}
+	return (0);
 }
