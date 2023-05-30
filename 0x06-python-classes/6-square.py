@@ -25,11 +25,11 @@ class Square:
     def position(self):
         """ proprety to retrive the position"""
         return (self.__position)
-    @size.setter
+    @position.setter
     def position(self, value):
         """proprety to set position to a value"""
         self.__position = value
-        if len(value) != 2 or not type(value[0]) is int or not type(value[1]) is int:
+        if not type(value) is tuple or len(value) != 2 or not type(value[0]) is int or not type(value[1]) is int:
             raise TypeError("position must be a tuple of 2 positive integers")
     def area(self):
         """return the current area"""
