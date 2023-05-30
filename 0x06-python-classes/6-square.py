@@ -38,6 +38,8 @@ class Square:
         """method to print the square"""
         if (self.size == 0):
             print("")
+        for i in range(0, self.__position[1]):
+            print("")
         else:
             for i in range(self.__size):
                 for j in range(self.__position[0]):
