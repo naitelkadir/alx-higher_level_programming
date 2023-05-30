@@ -5,7 +5,8 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """initialize a square
         Args:
-             size of the square
+            size(int): size of the square
+            position(int, int): position of the square
         """
         self.size = size
         self.position = position
