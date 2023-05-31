@@ -26,18 +26,18 @@ class Square:
     def __eq__(self, other):
         """ define == comaparator"""
         return self.area() == other.area()
-    def __df__(self, other):
+    def __ne__(self, other):
         """define != comaparator"""
-        return self.area() != self.other
-    def __inf__(self, other):
+        return self.area() != other.area()
+    def __It__(self, other):
         """define < comparator"""
         return self.area() < other.area()
-    def __infeq__(self, other):
+    def __le__(self, other):
         """ define <= comparator"""
         return self.area() <= other.area()
-    def __sup__(self, other):
+    def __gt__(self, other):
         """define > comparator"""
         return self.area() > other.area()
-    def __supeq__(self, other):
+    def __ge__(self, other):
         """define >= comparator"""
         return self.area() >= other.area()
