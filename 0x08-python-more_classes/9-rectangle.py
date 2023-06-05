@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 """Define a new rectangle class"""
 class Rectangle:
-    """Represent a rectangle"""
+    """Represent a rectangle
+    attributes:
+       number_of_instances(int)
+       print_symbol
+    """
     number_of_instances = 0
     print_symbol = "#"
     def __init__(self, width=0, height=0):
