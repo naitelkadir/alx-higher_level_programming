@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """define a class Myint inherits from int"""
+
+
 class MyInt(int):
     """inverts == and != int operators"""
     def __eq__(self, value):
