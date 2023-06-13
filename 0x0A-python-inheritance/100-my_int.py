@@ -4,6 +4,7 @@
 
 class MyInt(int):
     """inverts == and != int operators"""
+
     def __eq__(self, value):
         """invert to == to !="""
         return self.real != value
