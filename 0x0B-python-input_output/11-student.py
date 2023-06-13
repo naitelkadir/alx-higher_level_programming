@@ -38,4 +38,4 @@ class Student:
             json: a dictionnary
         """
         for i, j in json.items():
-            setattr(self, k, v)
+            setattr(self, i, j)
