@@ -19,6 +19,7 @@ class Student:
 
     def to_json(self,  attrs=None):
         """return a dict representation of a class.
+
         Args:
             attrs(list): the list of attributes to retrieve
         """

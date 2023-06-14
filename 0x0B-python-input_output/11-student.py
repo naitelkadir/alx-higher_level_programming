@@ -31,6 +31,7 @@ class Student:
                 if x == y:
                     d[x] = self.dict[y]
         return (d)
+
     def reload_from_json(self, json):
         """a function that replaces all attributes of an instance.
         
