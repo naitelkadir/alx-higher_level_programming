@@ -4,13 +4,19 @@ import json
 
 
 class Base:
-    """Represnt Base class"""
+    """Base model.
+
+    This Represents the "base" for all other classes in project 0x0C*.
+
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
+    """
     __nb_objects = 0
     def __init__(self, id=None):
         """initialize a base class.
         
         Args:
-           id(int): the id
+           id(int): The identity of the new Base.
         """
         if id != None:
             self.id = id
