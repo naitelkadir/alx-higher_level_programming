@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import json
 """Define a new class called Base"""
 
